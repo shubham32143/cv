@@ -1,90 +1,68 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Angela's Personal Site</title>
-  </head>
-  <body>
-    <table cellspacing="20">
-      <tr>
-        <td><img src="images/angela.png" alt="angela profile picture"></td>
-        <td>  <h1>Angelas Yu</h1>
-            <p><em>Founder and CTO of <strong><a href="https://www.appbrewery.co/courses">The App Brewery</a></<strong>.</em></p>
-            <p>I am an IOS and Web Dvelopment.I 💚 coffe and brew my own beers.</p></td>
-      </tr>
-    </table>
-      <hr>
-     <!Subtitle>
-      <h3>Books and Teaching</h3>
-      <ul>
-        <li>The complete ios app development Bootcamp</li>
-        <li>The complete Web Development Bootcamp</li>
-      </ul>
-      <hr>
-      <table cellspacing ="20">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Work</th>
-          </tr>
-        </thead>
-        <tr>
-          <td>2010 - 2019</td>
-          <td>Lead Development at Tempo App</td>
-        </tr>
-        <tr>
-          <td>2019</td>
-          <td>Researcher at the Institute of Cognitive Neyrons</td>
-        </tr>
-      </table>
-      <hr>
-      <br>
-      <h3>Skills</h3>
-      <table cellspacing ='20'>
-        <tr>
-          <td>  <table >
-              <tr>
-                <td>ios Development</td>
-                <td>🌟🌟🌟🌟🌟</td>
-              </tr>
-              <tr>
-                <td>Web Development</td>
-                <td>🌟🌟🌟🌟🌟</td>
-              </tr>
-              <tr>
-                <td>Photography</td>
-                <td>🌟🌟🌟</td>
-              </tr>
-              <tr>
-                <td>Painting</td>
-                <td>🌟🌟🌟</td>
-              </tr>
-            </table>
-          </td>
-            <td>  <table >
-                <tr>
-                  <td>ios Development</td>
-                  <td>🌟🌟🌟🌟🌟</td>
-                </tr>
-                <tr>
-                  <td>Web Development</td>
-                  <td>🌟🌟🌟🌟🌟</td>
-                </tr>
-                <tr>
-                  <td>Photography</td>
-                  <td>🌟🌟🌟</td>
-                </tr>
-                <tr>
-                  <td>Painting</td>
-                  <td>🌟🌟🌟</td>
-                </tr>
-              </table>
-            </td>
-        </tr>
-      </table>
-      <hr>
-      <a href="hobbies.html">My Hobbies</a>
-      <a href="Contact-me.html">Contact Me</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Design Using Html And CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+    <nav> 
+        <div class="logo"><img src="./images/logo.png"></div>
+    <div class="nav-links">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li>  <a href="#">Phone</a></li>        
+        <li><a href="#">Accessories</a></li>           
+        <li><a href="#">Cart</a></li>        
+    </ul>
+     </div>
+    </nav>
+     <div class="information">
+         <div class="overlay"></div>
+         <img class="mobile" src="./images/mobile.png">
+         <div id="circle">
+             <div class="feature one "><img src="./images/camera.png" alt="">
+            <div>
+                <h1>Processor</h1>
+                <p>Snapdragon Octa-core 11nm</p>
+            </div></div>
+             <div class="feature two"><img src="./images/processor.png" alt=""><div>
+                <h1>Display</h1>
+                <p>6.5" Mini-Drop Fullscreen</p>
+            </div> </div>
+             <div class="feature three"><img src="./images/display.png" alt=""><div>
+                <h1>Camera</h1>
+                <p>12MP,Wide Angle Lens</p> </div></div>
+             <div class="feature four"><img src="./images/battery.png" alt=""><div>
+                <h1>Battery Life</h1>
+                <p>5000mAh,720Hrs Standby</p> </div></div>
+         </div>
+     </div>
+     <div class="controls">
+         <img src="./images/arrow.png" id="upBtn">
+         <h3>features</h3>
+         <img src="./images/arrow.png" id="downBtn">
+     </div>
+    </div>
+    <script>
+        var circle = document.getElementById("circle")
+        var  upBtn= document.getElementById("upBtn")
+        var  downBtn= document.getElementById("downBtn")
 
-  </body>
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+        upBtn.onclick = function(){
+            rotateSum=rotateValue + "rotate(-90deg)";
+            circle.style.transform=rotateSum;
+            rotateValue=rotateSum;
+        }
+        downBtn.onclick = function(){
+            rotateSum=rotateValue + "rotate(90deg)";
+            circle.style.transform=rotateSum;
+            rotateValue=rotateSum;
+        }
+    </script>
+</body>
 </html>
